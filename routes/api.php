@@ -30,3 +30,10 @@ Route::prefix('project')->group(function () {
 Route::group(['prefix' => 'api'], function () {
     Route::post('/project', 'App\Http\Controllers\ProjectCreationController@store');
 });
+// Route::prefix('api')->group(function () {
+//     Route::post('project', 'App\Http\Controllers\ProjectCreationController@store')->name('project.create');
+// });
+
+Route::get('plant/{selected_project_id}', 'App\Http\Controllers\PlantController@indexApi');
+
+// Route::post('plant/save-data', 'App\Http\Controllers\PlantController@saveDataApi');
